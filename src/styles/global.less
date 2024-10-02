@@ -1,0 +1,27 @@
+@import './scrollbar';
+body {
+  font-family:
+    -apple-system,
+    Segoe UI,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Microsoft YaHei',
+    'ST Heiti';
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+body[theme='dark'] {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.ant-menu-item,
+.ant-menu-submenu-title {
+  & > svg,
+  .ant-menu-item-icon > svg {
+    width: 24px;
+    height: 24px;
+  }
+}
