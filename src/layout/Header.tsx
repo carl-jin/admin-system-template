@@ -1,8 +1,6 @@
 import { theme, Switch, Flex, Space } from 'antd';
 import { CSSProperties } from 'react';
 import useThemeStore from '@/store/theme';
-import UserAuth from '@/components/UserAuth';
-import DocsLinks from '@/components/DocsLinks';
 
 export default function Header(props: { style: CSSProperties }) {
   const { isDarkMode, toggleTheme } = useThemeStore();
@@ -25,8 +23,6 @@ export default function Header(props: { style: CSSProperties }) {
           <div className={'text-2xl font-bold ml-2'}>ID 库</div>
         </Space>
         <Space size={24}>
-          <DocsLinks />
-          <UserAuth />
           <Switch
             checked={isDarkMode}
             onChange={(checked) => toggleTheme(checked)}

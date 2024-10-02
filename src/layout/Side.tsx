@@ -18,12 +18,7 @@ export default function Side(props: { bg: string }) {
 
   const menu = useMemo(() => {
     if (!user) return [];
-    //  根据不同类型，返回不同的 menu
-    if (user.type === 'add-friend') {
-      return MenuItems.filter((item) => item.key === RouterNameEnum.ID_FRIEND);
-    } else {
-      return MenuItems.filter((item) => item.key === RouterNameEnum.ID_SEARCH);
-    }
+    return MenuItems;
   }, [user]);
 
   useEffect(() => {

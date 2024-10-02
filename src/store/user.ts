@@ -37,15 +37,6 @@ const useUserStore = create<UserStore>()(
           const { data } = await login(username, password);
           const { user, access_token } = data;
           set({ user, token: access_token });
-          setTimeout(() => {
-            if (user.type === 'add-friend') {
-              router.navigate(
-                `/${RouterNameEnum.ID_FRIEND}/${RouterNameEnum.ID_FRIEND_UPLOAD_FILES}`,
-              );
-            } else {
-              router.navigate('/');
-            }
-          }, 300);
         } catch (error) {
           throw error;
         }
